@@ -1,0 +1,63 @@
+import 'package:captainpassword/lavendr/enums/column_data_type.dart';
+import 'package:captainpassword/lavendr/models/column_info.dart';
+
+class PasswordTable {
+  static final List<ColumnInfo> columns = List.from([
+    new ColumnInfo(
+        name: "Name",
+        datatype: ColumnDataType.ShortText,
+        isRequired: true,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null),
+    new ColumnInfo(
+        name: "Url",
+        datatype: ColumnDataType.ShortText,
+        isRequired: true,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null),
+    new ColumnInfo(
+        name: "Login",
+        datatype: ColumnDataType.ShortText,
+        isRequired: true,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null),
+    new ColumnInfo(
+        name: "Password",
+        datatype: ColumnDataType.ShortText,
+        isRequired: true,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null),
+    new ColumnInfo(
+        name: "Folder",
+        datatype: ColumnDataType.ShortText,
+        isRequired: false,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null),
+    new ColumnInfo(
+        name: "Notes",
+        datatype: ColumnDataType.ShortText,
+        isRequired: false,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null),
+    new ColumnInfo(
+        name: "Encrypted",
+        datatype: ColumnDataType.Boolean,
+        isRequired: true,
+        isUnique: false,
+        isForeignKey: false,
+        foreignName: null,
+        foreignTable: null)
+  ]);
+}
