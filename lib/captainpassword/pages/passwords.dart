@@ -17,7 +17,7 @@ class PasswordsPage extends StatelessWidget {
 
   /// Reloads data from bloc
   reloadData() {
-    passwordBloc.getRows();
+    passwordBloc.getPasswords();
   }
 
   _openAddUpdateDialog(BuildContext context, Password model) {

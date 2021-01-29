@@ -65,43 +65,6 @@ class PasswordApiProvider {
     }
   }
 
-  /// Create table
-  Future<APIResult> insertRows(List<Password> passwords) async {
-    // final url = new Uri.http(
-    //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url =
-        "http://${Environment.APIUrl}/API/Table/InsertRows?table=Passwords";
-
-    final headers = {
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ${ServiceManager<AuthService>().token}'
-    };
-
-    final body = json.encoder.convert(passwords);
-
-    http.Response response;
-    String error;
-
-    try {
-      response = await http.post(url, headers: headers, body: body);
-    } catch (e) {
-      error = e.toString();
-    }
-
-    if (error != null) {
-      return new APIResult(success: false, message: error);
-    } else {
-      if (response.statusCode == 200) {
-        // If the call to the server was successful, parse the Password response
-        APIResult result = decodeResponse(response.body);
-        return result;
-      } else {
-        // If that call was not successful, throw an error.
-        return new APIResult(success: false, message: response.reasonPhrase);
-      }
-    }
-  }
-
   /// Get rows
   Future<PasswordsResponse> getRows() async {
     // final url = new Uri.http(
@@ -138,6 +101,43 @@ class PasswordApiProvider {
     }
   }
 
+  /// Insert rows
+  Future<APIResult> insertRows(List<Password> passwords) async {
+    // final url = new Uri.http(
+    //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
+    final url =
+        "http://${Environment.APIUrl}/API/Table/InsertRows?table=Passwords";
+
+    final headers = {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ${ServiceManager<AuthService>().token}'
+    };
+
+    final body = json.encoder.convert(passwords);
+
+    http.Response response;
+    String error;
+
+    try {
+      response = await http.post(url, headers: headers, body: body);
+    } catch (e) {
+      error = e.toString();
+    }
+
+    if (error != null) {
+      return new APIResult(success: false, message: error);
+    } else {
+      if (response.statusCode == 200) {
+        // If the call to the server was successful, parse the Password response
+        APIResult result = decodeResponse(response.body);
+        return result;
+      } else {
+        // If that call was not successful, throw an error.
+        return new APIResult(success: false, message: response.reasonPhrase);
+      }
+    }
+  }
+
   /// Update rows
   Future<APIResult> updateRows(Password password) async {
     // final url = new Uri.http(
@@ -167,6 +167,113 @@ class PasswordApiProvider {
 
     try {
       response = await http.post(url, headers: headers, body: body);
+    } catch (e) {
+      error = e.toString();
+    }
+
+    if (error != null) {
+      return new APIResult(success: false, message: error);
+    } else {
+      if (response.statusCode == 200) {
+        // If the call to the server was successful, parse the Password response
+        APIResult result = decodeResponse(response.body);
+        return result;
+      } else {
+        // If that call was not successful, throw an error.
+        return new APIResult(success: false, message: response.reasonPhrase);
+      }
+    }
+  }
+
+  /// Get passwords
+  Future<PasswordsResponse> getPasswords() async {
+    // final url = new Uri.http(
+    //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
+    final url = "http://${Environment.APIUrl}/API/Passwords";
+
+    final headers = {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ${ServiceManager<AuthService>().token}'
+    };
+
+    http.Response response;
+    String error;
+
+    try {
+      response = await http.get(url, headers: headers);
+    } catch (e) {
+      error = e.toString();
+    }
+
+    if (error != null) {
+      return new PasswordsResponse(success: false, message: error);
+    } else {
+      if (response.statusCode == 200) {
+        // If the call to the server was successful, parse the Password response
+        PasswordsResponse result = decodePasswordsResponse(response.body);
+        return result;
+      } else {
+        // If that call was not successful, throw an error.
+        return new PasswordsResponse(
+            success: false, message: response.reasonPhrase);
+      }
+    }
+  }
+
+  /// Insert password
+  Future<APIResult> insertPassword(Password password) async {
+    // final url = new Uri.http(
+    //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
+    final url = "http://${Environment.APIUrl}/API/Passwords";
+
+    final headers = {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ${ServiceManager<AuthService>().token}'
+    };
+
+    final body = json.encoder.convert(password);
+
+    http.Response response;
+    String error;
+
+    try {
+      response = await http.post(url, headers: headers, body: body);
+    } catch (e) {
+      error = e.toString();
+    }
+
+    if (error != null) {
+      return new APIResult(success: false, message: error);
+    } else {
+      if (response.statusCode == 200) {
+        // If the call to the server was successful, parse the Password response
+        APIResult result = decodeResponse(response.body);
+        return result;
+      } else {
+        // If that call was not successful, throw an error.
+        return new APIResult(success: false, message: response.reasonPhrase);
+      }
+    }
+  }
+
+  /// Update password
+  Future<APIResult> updatePassword(Password password) async {
+    // final url = new Uri.http(
+    //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
+    final url = "http://${Environment.APIUrl}/API/Passwords/${password.id}";
+
+    final headers = {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ${ServiceManager<AuthService>().token}'
+    };
+
+    final body = json.encoder.convert(password);
+
+    http.Response response;
+    String error;
+
+    try {
+      response = await http.put(url, headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }

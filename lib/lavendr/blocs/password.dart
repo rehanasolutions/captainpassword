@@ -17,12 +17,6 @@ class PasswordBloc {
     return result;
   }
 
-  /// Insert rows
-  Future<APIResult> insertRows(List<Password> passwords) async {
-    APIResult result = await repository.insertRows(passwords);
-    return result;
-  }
-
   /// Get rows
   Future<PasswordsResponse> getRows() async {
     if (_passwordsFetcher == null) {
@@ -35,9 +29,39 @@ class PasswordBloc {
     return result;
   }
 
+  /// Insert rows
+  Future<APIResult> insertRows(List<Password> passwords) async {
+    APIResult result = await repository.insertRows(passwords);
+    return result;
+  }
+
   /// Update rows
   Future<APIResult> updateRows(Password password) async {
     APIResult result = await repository.updateRows(password);
+    return result;
+  }
+
+  /// Get passwords
+  Future<PasswordsResponse> getPasswords() async {
+    if (_passwordsFetcher == null) {
+      _passwordsFetcher = PublishSubject<List<Password>>();
+    }
+
+    PasswordsResponse result = await repository.getPasswords();
+    _passwordsFetcher.sink.add(result.data);
+
+    return result;
+  }
+
+  /// Insert password
+  Future<APIResult> insertPassword(Password password) async {
+    APIResult result = await repository.insertPassword(password);
+    return result;
+  }
+
+  /// Update password
+  Future<APIResult> updatePassword(Password password) async {
+    APIResult result = await repository.updatePassword(password);
     return result;
   }
 

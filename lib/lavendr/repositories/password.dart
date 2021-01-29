@@ -11,18 +11,33 @@ class PasswordRepository {
     return passwordApiProvider.createTable();
   }
 
-  /// Insert rows
-  Future<APIResult> insertRows(List<Password> passwords) async {
-    return passwordApiProvider.insertRows(passwords);
-  }
-
   /// Get rows
   Future<PasswordsResponse> getRows() async {
     return passwordApiProvider.getRows();
   }
 
+  /// Insert rows
+  Future<APIResult> insertRows(List<Password> passwords) async {
+    return passwordApiProvider.insertRows(passwords);
+  }
+
   /// Update rows
   Future<APIResult> updateRows(Password password) async {
     return passwordApiProvider.updateRows(password);
+  }
+
+  /// Get passwords
+  Future<PasswordsResponse> getPasswords() async {
+    return passwordApiProvider.getPasswords();
+  }
+
+  /// Insert password
+  Future<APIResult> insertPassword(Password password) async {
+    return passwordApiProvider.insertPassword(password);
+  }
+
+  /// Update password
+  Future<APIResult> updatePassword(Password password) async {
+    return passwordApiProvider.updatePassword(password);
   }
 }

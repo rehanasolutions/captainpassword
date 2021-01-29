@@ -187,9 +187,9 @@ class _AddEditSiteWidgetState extends State<AddEditSiteWidget> {
       if (widget.document != null) {
         // Update document
         password.id = widget.document.id;
-        result = await passwordBloc.updateRows(password);
+        result = await passwordBloc.updatePassword(password);
       } else {
-        result = await passwordBloc.insertRows([password]);
+        result = await passwordBloc.insertPassword(password);
       }
 
       if (result.success) {
