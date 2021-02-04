@@ -1,5 +1,5 @@
-import 'package:captainpassword/lavendr/enums/column_data_type.dart';
-import 'package:captainpassword/lavendr/models/column_info.dart';
+import 'package:captainpassword/levendr/enums/column_data_type.dart';
+import 'package:captainpassword/levendr/models/column_info.dart';
 
 class PasswordTable {
   static final List<ColumnInfo> columns = List.from([

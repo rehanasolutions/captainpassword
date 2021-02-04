@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:captainpassword/environment.dart';
-import 'package:captainpassword/lavendr/models/login_response.dart';
-import 'package:captainpassword/lavendr/models/user.dart';
+import 'package:captainpassword/levendr/models/login_response.dart';
+import 'package:captainpassword/levendr/models/user.dart';
 
 class UserApiProvider {
   /// Decode Login Response

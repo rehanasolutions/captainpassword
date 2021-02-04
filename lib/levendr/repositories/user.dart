@@ -1,6 +1,6 @@
-import 'package:captainpassword/lavendr/api_providers/user.dart';
-import 'package:captainpassword/lavendr/models/login_response.dart';
-import 'package:captainpassword/lavendr/models/user.dart';
+import 'package:captainpassword/levendr/api_providers/user.dart';
+import 'package:captainpassword/levendr/models/login_response.dart';
+import 'package:captainpassword/levendr/models/user.dart';
 
 class UserRepository {
   final userApiProvider = UserApiProvider();

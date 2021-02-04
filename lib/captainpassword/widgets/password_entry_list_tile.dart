@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:captainpassword/lavendr/models/password.dart';
+import 'package:captainpassword/levendr/models/password.dart';
 
 class PasswordEntryListTileWidget extends StatelessWidget {
   final Password document;

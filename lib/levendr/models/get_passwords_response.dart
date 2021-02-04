@@ -1,4 +1,4 @@
-import 'package:captainpassword/lavendr/models/password.dart';
+import 'package:captainpassword/levendr/models/password.dart';
 
 class PasswordsResponse {
   bool success;

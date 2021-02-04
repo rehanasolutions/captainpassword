@@ -1,7 +1,7 @@
 import 'package:rxdart/subjects.dart';
-import 'package:captainpassword/lavendr/models/login_response.dart';
-import 'package:captainpassword/lavendr/models/user.dart';
-import 'package:captainpassword/lavendr/repositories/user.dart';
+import 'package:captainpassword/levendr/models/login_response.dart';
+import 'package:captainpassword/levendr/models/user.dart';
+import 'package:captainpassword/levendr/repositories/user.dart';
 // import 'package:rxdart/rxdart.dart';
 
 class UserBloc {

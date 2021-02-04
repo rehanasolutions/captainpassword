@@ -1,11 +1,11 @@
 import 'package:rxdart/subjects.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:rehana/helpers/console.dart';
-import 'package:captainpassword/lavendr/blocs/password.dart';
-import 'package:captainpassword/lavendr/blocs/user.dart';
+import 'package:captainpassword/levendr/blocs/password.dart';
+import 'package:captainpassword/levendr/blocs/user.dart';
 import 'package:rehana/locator.dart';
-import 'package:captainpassword/lavendr/models/login_response.dart';
-import 'package:captainpassword/lavendr/models/user.dart';
+import 'package:captainpassword/levendr/models/login_response.dart';
+import 'package:captainpassword/levendr/models/user.dart';
 
 class AuthService {
   BehaviorSubject _user = BehaviorSubject.seeded(null);

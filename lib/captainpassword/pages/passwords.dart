@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rehana/helpers/console.dart';
-import 'package:captainpassword/lavendr/blocs/password.dart';
+import 'package:captainpassword/levendr/blocs/password.dart';
 import 'package:captainpassword/captainpassword/dialogs/add_edit_site.dart';
 import 'package:rehana/locator.dart';
-import 'package:captainpassword/lavendr/models/password.dart';
+import 'package:captainpassword/levendr/models/password.dart';
 import 'package:rehana/services/search.dart';
 
 import 'package:captainpassword/captainpassword/widgets/passwords_list.dart';

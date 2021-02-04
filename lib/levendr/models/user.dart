@@ -1,5 +1,5 @@
-import 'package:captainpassword/lavendr/models/permission.dart';
-import 'package:captainpassword/lavendr/models/role.dart';
+import 'package:captainpassword/levendr/models/permission.dart';
+import 'package:captainpassword/levendr/models/role.dart';
 
 class User {
   int id;

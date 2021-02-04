@@ -5,7 +5,7 @@ enum ColumnDataType {
   Float,
   Boolean,
   BooleanArray,
-  Date,
+  DateTime,
   Json,
   JsonArray,
   Money,

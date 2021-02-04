@@ -7,9 +7,10 @@ class Password {
   String folder;
   String notes;
   bool encrypted;
-  int userId;
-  DateTime created;
-  DateTime lastUpdated;
+  int createdBy;
+  DateTime createdOn;
+  int lastUpdatedBy;
+  DateTime lastUpdatedOn;
 
   Password(
       {this.id,
@@ -20,9 +21,10 @@ class Password {
       this.folder,
       this.notes,
       this.encrypted,
-      this.userId,
-      this.created,
-      this.lastUpdated});
+      this.createdBy,
+      this.createdOn,
+      this.lastUpdatedBy,
+      this.lastUpdatedOn});
 
   Password.fromJson(Map<String, dynamic> json) {
     id = json['Id'];
@@ -33,10 +35,12 @@ class Password {
     folder = json['Folder'];
     notes = json['Notes'];
     encrypted = json['Encrypted'];
-    userId = json['UserId'];
-    created = json['Created'] != null ? DateTime.parse(json['Created']) : null;
-    lastUpdated = json['LastUpdated'] != null
-        ? DateTime.parse(json['LastUpdated'])
+    createdBy = json['createdBy'];
+    createdOn =
+        json['createdOn'] != null ? DateTime.parse(json['createdOn']) : null;
+    lastUpdatedBy = json['lastUpdatedBy'];
+    lastUpdatedOn = json['lastUpdatedOn'] != null
+        ? DateTime.parse(json['lastUpdatedOn'])
         : null;
   }
 
@@ -50,10 +54,12 @@ class Password {
     data['folder'] = this.folder;
     data['notes'] = this.notes;
     data['encrypted'] = this.encrypted;
-    data['userId'] = this.userId;
-    data['created'] = this.created != null ? this.created.toString() : null;
-    data['lastUpdated'] =
-        this.lastUpdated != null ? this.lastUpdated.toString() : null;
+    data['createdBy'] = this.createdBy;
+    data['createdOn'] =
+        this.createdOn != null ? this.createdOn.toString() : null;
+    data['lastUpdatedBy'] = this.lastUpdatedBy;
+    data['lastUpdatedOn'] =
+        this.lastUpdatedOn != null ? this.lastUpdatedOn.toString() : null;
     return data;
   }
 }

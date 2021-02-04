@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:captainpassword/captainpassword/widgets/password_entry_list_tile.dart';
-import 'package:captainpassword/lavendr/models/password.dart';
+import 'package:captainpassword/levendr/models/password.dart';
 
 class PasswordsListWidget extends StatelessWidget {
   final List<Password> list;

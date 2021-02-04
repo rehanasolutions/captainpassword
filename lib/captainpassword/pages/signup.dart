@@ -8,8 +8,8 @@ import 'package:rehana/services/navigation.dart';
 import 'package:rehana/services/dialog.dart';
 import 'package:rehana/dialogs/info.dart';
 import 'package:captainpassword/captainpassword/services/auth.dart';
-import 'package:captainpassword/lavendr/models/login_response.dart';
-import 'package:captainpassword/lavendr/models/user.dart';
+import 'package:captainpassword/levendr/models/login_response.dart';
+import 'package:captainpassword/levendr/models/user.dart';
 import 'package:captainpassword/captainpassword/constants.dart';
 
 class SignupPage extends StatefulWidget {

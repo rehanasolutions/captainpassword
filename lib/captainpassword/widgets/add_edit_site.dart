@@ -10,9 +10,9 @@ import 'package:rehana/services/dialog.dart';
 import 'package:rehana/services/url.dart';
 import 'package:rehana/widgets/flexible_textfield.dart';
 import 'package:rehana/widgets/orientational_column_row.dart';
-import 'package:captainpassword/lavendr/blocs/password.dart';
-import 'package:captainpassword/lavendr/models/api_result.dart';
-import 'package:captainpassword/lavendr/models/password.dart';
+import 'package:captainpassword/levendr/blocs/password.dart';
+import 'package:captainpassword/levendr/models/api_result.dart';
+import 'package:captainpassword/levendr/models/password.dart';
 import 'package:captainpassword/captainpassword/services/key.dart';
 import 'package:captainpassword/captainpassword/widgets/folder_drop_down_menu.dart';
 

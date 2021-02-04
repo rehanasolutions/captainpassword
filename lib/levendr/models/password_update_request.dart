@@ -1,5 +1,5 @@
-import 'package:captainpassword/lavendr/models/password.dart';
-import 'package:captainpassword/lavendr/models/query_search_item.dart';
+import 'package:captainpassword/levendr/models/password.dart';
+import 'package:captainpassword/levendr/models/query_search_item.dart';
 
 class PasswordUpdateRequest {
   Password data;

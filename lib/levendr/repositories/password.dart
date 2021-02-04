@@ -1,7 +1,7 @@
-import 'package:captainpassword/lavendr/api_providers/password.dart';
-import 'package:captainpassword/lavendr/models/api_result.dart';
-import 'package:captainpassword/lavendr/models/get_passwords_response.dart';
-import 'package:captainpassword/lavendr/models/password.dart';
+import 'package:captainpassword/levendr/api_providers/password.dart';
+import 'package:captainpassword/levendr/models/api_result.dart';
+import 'package:captainpassword/levendr/models/get_passwords_response.dart';
+import 'package:captainpassword/levendr/models/password.dart';
 
 class PasswordRepository {
   final passwordApiProvider = PasswordApiProvider();

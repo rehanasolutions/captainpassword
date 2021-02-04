@@ -1,4 +1,4 @@
-import 'package:captainpassword/lavendr/enums/column_condition.dart';
+import 'package:captainpassword/levendr/enums/column_condition.dart';
 
 class QuerySearchItem {
   String name;
