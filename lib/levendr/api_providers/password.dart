@@ -46,7 +46,8 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(url, headers: headers, body: body);
+      response = await http.post(Uri.dataFromString(url),
+          headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -81,7 +82,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(url, headers: headers);
+      response = await http.post(Uri.dataFromString(url), headers: headers);
     } catch (e) {
       error = e.toString();
     }
@@ -119,7 +120,8 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(url, headers: headers, body: body);
+      response = await http.post(Uri.dataFromString(url),
+          headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -166,7 +168,8 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(url, headers: headers, body: body);
+      response = await http.post(Uri.dataFromString(url),
+          headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -200,7 +203,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.get(url, headers: headers);
+      response = await http.get(Uri.dataFromString(url), headers: headers);
     } catch (e) {
       error = e.toString();
     }
@@ -237,7 +240,8 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(url, headers: headers, body: body);
+      response = await http.post(Uri.dataFromString(url),
+          headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -273,7 +277,8 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.put(url, headers: headers, body: body);
+      response =
+          await http.put(Uri.dataFromString(url), headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }

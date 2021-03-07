@@ -6,13 +6,13 @@ import 'package:rxdart/subjects.dart';
 class KeyService {
   final seconds = const Duration(seconds: 1);
 
-  BehaviorSubject _keySubject = BehaviorSubject.seeded(null);
+  BehaviorSubject<String> _keySubject = BehaviorSubject.seeded(null);
   Stream get keystream$ => _keySubject.stream;
-  String get currentKey => _keySubject.value;
+  String get currentKey => _keySubject.valueWrapper.value;
 
-  BehaviorSubject _remainingTimeSubject = BehaviorSubject.seeded(0);
+  BehaviorSubject<int> _remainingTimeSubject = BehaviorSubject.seeded(0);
   Stream get remainingTimestream$ => _remainingTimeSubject.stream;
-  int get currentRemainingTime => _remainingTimeSubject.value;
+  int get currentRemainingTime => _remainingTimeSubject.valueWrapper.value;
 
   DateTime _startTime;
   DateTime _endTime;

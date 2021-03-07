@@ -8,9 +8,9 @@ import 'package:captainpassword/levendr/models/login_response.dart';
 import 'package:captainpassword/levendr/models/user.dart';
 
 class AuthService {
-  BehaviorSubject _user = BehaviorSubject.seeded(null);
+  BehaviorSubject<User> _user = BehaviorSubject.seeded(null);
   Stream get stream$ => _user.stream;
-  User get user => _user.value;
+  User get user => _user.valueWrapper.value;
 
   String get token => user != null && user.token != null ? user.token : null;
 
