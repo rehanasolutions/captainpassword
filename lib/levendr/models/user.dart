@@ -22,25 +22,25 @@ class User {
       this.token});
 
   User.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    username = json['username'];
-    fullname = json['fullname'];
-    email = json['email'];
-    password = json['password'];
-    role = Role.fromJson(json['role']);
+    id = json['Id'];
+    username = json['Username'];
+    fullname = json['Fullname'];
+    email = json['Email'];
+    password = json['Password'];
+    role = Role.fromJson(json['Role']);
     permissions = List<Permission>.from(
-        json['permissions'].map((model) => Permission.fromJson(model)));
-    token = json['token'];
+        json['Permissions'].map((model) => Permission.fromJson(model)));
+    token = json['Token'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['username'] = this.username;
-    data['fullname'] = this.fullname;
-    data['email'] = this.email;
-    data['password'] = this.password;
-    data['token'] = this.token;
+    data['Id'] = this.id;
+    data['Username'] = this.username;
+    data['Fullname'] = this.fullname;
+    data['Email'] = this.email;
+    data['Password'] = this.password;
+    data['Token'] = this.token;
     return data;
   }
 }

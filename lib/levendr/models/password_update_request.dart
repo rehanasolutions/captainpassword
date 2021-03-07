@@ -9,13 +9,13 @@ class PasswordUpdateRequest {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['data'] = this.data.toJson();
+    data['Data'] = this.data.toJson();
 
     List parameters = [];
     this.parameters.forEach((element) {
       parameters.add(element.toJson());
     });
-    data['parameters'] = parameters;
+    data['Parameters'] = parameters;
 
     return data;
   }

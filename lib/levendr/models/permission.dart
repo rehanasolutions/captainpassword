@@ -6,16 +6,16 @@ class Permission {
   Permission({this.id, this.name, this.description});
 
   Permission.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    description = json['description'];
+    id = json['Id'];
+    name = json['Name'];
+    description = json['Description'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['description'] = this.description;
+    data['Id'] = this.id;
+    data['Name'] = this.name;
+    data['Description'] = this.description;
     return data;
   }
 }

@@ -35,30 +35,30 @@ class Password {
     folder = json['Folder'];
     notes = json['Notes'];
     encrypted = json['Encrypted'];
-    createdBy = json['createdBy'];
+    createdBy = json['CreatedBy'];
     createdOn =
-        json['createdOn'] != null ? DateTime.parse(json['createdOn']) : null;
-    lastUpdatedBy = json['lastUpdatedBy'];
-    lastUpdatedOn = json['lastUpdatedOn'] != null
-        ? DateTime.parse(json['lastUpdatedOn'])
+        json['CreatedOn'] != null ? DateTime.parse(json['CreatedOn']) : null;
+    lastUpdatedBy = json['LastUpdatedBy'];
+    lastUpdatedOn = json['LastUpdatedOn'] != null
+        ? DateTime.parse(json['LastUpdatedOn'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['url'] = this.url;
-    data['login'] = this.login;
-    data['password'] = this.password;
-    data['folder'] = this.folder;
-    data['notes'] = this.notes;
-    data['encrypted'] = this.encrypted;
-    data['createdBy'] = this.createdBy;
-    data['createdOn'] =
+    data['Id'] = this.id;
+    data['Name'] = this.name;
+    data['Url'] = this.url;
+    data['Login'] = this.login;
+    data['Password'] = this.password;
+    data['Folder'] = this.folder;
+    data['Notes'] = this.notes;
+    data['Encrypted'] = this.encrypted;
+    data['CreatedBy'] = this.createdBy;
+    data['CreatedOn'] =
         this.createdOn != null ? this.createdOn.toString() : null;
-    data['lastUpdatedBy'] = this.lastUpdatedBy;
-    data['lastUpdatedOn'] =
+    data['LastUpdatedBy'] = this.lastUpdatedBy;
+    data['LastUpdatedOn'] =
         this.lastUpdatedOn != null ? this.lastUpdatedOn.toString() : null;
     return data;
   }

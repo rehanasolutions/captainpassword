@@ -18,7 +18,7 @@ class UserApiProvider {
     final url = new Uri.http("${Environment.APIUrl}", "/API/User/Login");
     final headers = {'Content-type': 'application/json'};
     final body =
-        json.encoder.convert({"username": username, "password": password});
+        json.encoder.convert({"Username": username, "Password": password});
 
     http.Response response;
     String error;
@@ -86,7 +86,7 @@ class UserApiProvider {
 
     final headers = {'Content-type': 'application/json'};
     final body = json.encoder
-        .convert({"username": user.username, "password": user.password});
+        .convert({"Username": user.username, "Password": user.password});
 
     http.Response response;
     String error;

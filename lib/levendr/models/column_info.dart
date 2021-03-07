@@ -21,26 +21,26 @@ class ColumnInfo {
       this.foreignName});
 
   ColumnInfo.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    datatype = json['datatype'];
-    isRequired = json['isRequired'];
-    isUnique = json['isUnique'];
-    isForeignKey = json['isForeignKey'];
-    foreignSchema = json['foreignSchema'];
-    foreignTable = json['foreignTable'];
-    foreignName = json['foreignName'];
+    name = json['Name'];
+    datatype = json['Datatype'];
+    isRequired = json['IsRequired'];
+    isUnique = json['IsUnique'];
+    isForeignKey = json['IsForeignKey'];
+    foreignSchema = json['ForeignSchema'];
+    foreignTable = json['ForeignTable'];
+    foreignName = json['ForeignName'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['datatype'] = this.datatype.index;
-    data['isRequired'] = this.isRequired;
-    data['isUnique'] = this.isUnique;
-    data['isForeignKey'] = this.isForeignKey;
-    data['foreignSchema'] = this.foreignSchema;
-    data['foreignTable'] = this.foreignTable;
-    data['foreignName'] = this.foreignName;
+    data['Name'] = this.name;
+    data['Datatype'] = this.datatype.index;
+    data['IsRequired'] = this.isRequired;
+    data['IsUnique'] = this.isUnique;
+    data['IsForeignKey'] = this.isForeignKey;
+    data['ForeignSchema'] = this.foreignSchema;
+    data['ForeignTable'] = this.foreignTable;
+    data['ForeignName'] = this.foreignName;
     return data;
   }
 }

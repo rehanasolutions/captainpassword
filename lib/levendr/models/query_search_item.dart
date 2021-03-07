@@ -9,18 +9,18 @@ class QuerySearchItem {
   QuerySearchItem({this.name, this.value, this.condition, this.caseSensitive});
 
   QuerySearchItem.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    value = json['value'];
-    condition = json['condition'];
-    caseSensitive = json['caseSensitive'];
+    name = json['Name'];
+    value = json['Value'];
+    condition = json['Condition'];
+    caseSensitive = json['CaseSensitive'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['value'] = this.value;
-    data['condition'] = this.condition.index;
-    data['caseSensitive'] = this.caseSensitive;
+    data['Name'] = this.name;
+    data['Value'] = this.value;
+    data['Condition'] = this.condition.index;
+    data['CaseSensitive'] = this.caseSensitive;
     return data;
   }
 }

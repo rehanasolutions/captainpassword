@@ -31,8 +31,8 @@ class PasswordApiProvider {
     // Using Uri.http caused the ? symbol to be converted too which is invalid
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url =
-        "http://${Environment.APIUrl}/API/Table/CreateTable?table=Passwords";
+    final url = new Uri.http(
+        "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
 
     final headers = {
       'Content-type': 'application/json',
@@ -46,8 +46,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(Uri.dataFromString(url),
-          headers: headers, body: body);
+      response = await http.post(url, headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -70,8 +69,8 @@ class PasswordApiProvider {
   Future<PasswordsResponse> getRows() async {
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url =
-        "http://${Environment.APIUrl}/API/Table/GetRows?table=Passwords";
+    final url = new Uri.http(
+        "${Environment.APIUrl}", "/API/Table/GetRows?table=Passwords");
 
     final headers = {
       'Content-type': 'application/json',
@@ -82,7 +81,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(Uri.dataFromString(url), headers: headers);
+      response = await http.post(url, headers: headers);
     } catch (e) {
       error = e.toString();
     }
@@ -106,8 +105,8 @@ class PasswordApiProvider {
   Future<APIResult> insertRows(List<Password> passwords) async {
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url =
-        "http://${Environment.APIUrl}/API/Table/InsertRows?table=Passwords";
+    final url = new Uri.http(
+        "${Environment.APIUrl}", "/API/Table/InsertRows?table=Passwords");
 
     final headers = {
       'Content-type': 'application/json',
@@ -120,8 +119,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(Uri.dataFromString(url),
-          headers: headers, body: body);
+      response = await http.post(url, headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -144,8 +142,8 @@ class PasswordApiProvider {
   Future<APIResult> updateRows(Password password) async {
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url =
-        "http://${Environment.APIUrl}/API/Table/UpdateRows?table=Passwords";
+    final url = new Uri.http(
+        "${Environment.APIUrl}", "/API/Table/UpdateRows?table=Passwords");
 
     final headers = {
       'Content-type': 'application/json',
@@ -168,8 +166,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(Uri.dataFromString(url),
-          headers: headers, body: body);
+      response = await http.post(url, headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -192,7 +189,7 @@ class PasswordApiProvider {
   Future<PasswordsResponse> getPasswords() async {
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url = "http://${Environment.APIUrl}/API/Passwords";
+    final url = new Uri.http("${Environment.APIUrl}", "/API/Passwords");
 
     final headers = {
       'Content-type': 'application/json',
@@ -203,7 +200,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.get(Uri.dataFromString(url), headers: headers);
+      response = await http.get(url, headers: headers);
     } catch (e) {
       error = e.toString();
     }
@@ -227,7 +224,7 @@ class PasswordApiProvider {
   Future<APIResult> insertPassword(Password password) async {
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url = "http://${Environment.APIUrl}/API/Passwords";
+    final url = new Uri.http("${Environment.APIUrl}", "/API/Passwords");
 
     final headers = {
       'Content-type': 'application/json',
@@ -240,8 +237,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response = await http.post(Uri.dataFromString(url),
-          headers: headers, body: body);
+      response = await http.post(url, headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }
@@ -264,7 +260,8 @@ class PasswordApiProvider {
   Future<APIResult> updatePassword(Password password) async {
     // final url = new Uri.http(
     //     "${Environment.APIUrl}", "/API/Table/CreateTable?table=Passwords");
-    final url = "http://${Environment.APIUrl}/API/Passwords/${password.id}";
+    final url =
+        new Uri.http("${Environment.APIUrl}", "/API/Passwords/${password.id}");
 
     final headers = {
       'Content-type': 'application/json',
@@ -277,8 +274,7 @@ class PasswordApiProvider {
     String error;
 
     try {
-      response =
-          await http.put(Uri.dataFromString(url), headers: headers, body: body);
+      response = await http.put(url, headers: headers, body: body);
     } catch (e) {
       error = e.toString();
     }

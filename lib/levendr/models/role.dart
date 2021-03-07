@@ -7,18 +7,18 @@ class Role {
   Role({this.id, this.name, this.description, this.level});
 
   Role.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    description = json['description'];
-    level = json['level'];
+    id = json['Id'];
+    name = json['Name'];
+    description = json['Description'];
+    level = json['Level'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['description'] = this.description;
-    data['level'] = this.level;
+    data['Id'] = this.id;
+    data['Name'] = this.name;
+    data['Description'] = this.description;
+    data['Level'] = this.level;
     return data;
   }
 }
